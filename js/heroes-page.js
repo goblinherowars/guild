@@ -21,7 +21,7 @@ function render() {
     const card = document.createElement('article');
     card.className = 'hero-card';
     const portrait = document.createElement('img');
-    portrait.src = hero.image;
+    portrait.src = `${hero.image}?v=portraits-2`;
     portrait.alt = hero.name[language];
     portrait.width = 88;
     portrait.height = 88;

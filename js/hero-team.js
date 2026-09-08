@@ -9,6 +9,6 @@ export function heroTeamMarkup(ids) {
   return `<div class="hero-portraits" role="group" aria-label="${escape(t('heroTeam'))}">${ids.map(id => {
     const hero = byId.get(id);
     const name = escape(hero.name[language]);
-    return `<img src="${hero.image}" alt="${name}" title="${name}" width="64" height="64" loading="lazy" decoding="async">`;
+    return `<img src="${hero.image}?v=portraits-2" alt="${name}" title="${name}" width="64" height="64" loading="lazy" decoding="async">`;
   }).join('')}</div>`;
 }
