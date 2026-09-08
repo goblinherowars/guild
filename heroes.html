@@ -1,1 +1,48 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Goblins · heroes</title><link rel="stylesheet" href="css/styles.css"></head><body><header class="site-header" data-shell-header></header><main class="container guide-wrap"><section class="guide-card"><div class="eyebrow">Goblins Guild Portal</div><h1 data-i18n="heroes"></h1><p data-i18n="heroesText"></p><div class="meta" data-i18n="coming"></div></section></main><footer class="site-footer" data-shell-footer></footer><script type="module" src="js/app.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Goblins · Герои</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header" data-shell-header></header>
+  <main class="container heroes-page">
+    <section class="heroes-intro" aria-labelledby="heroes-title">
+      <div class="eyebrow">Hero Wars: Alliance</div>
+      <h1 id="heroes-title" data-i18n="heroes"></h1>
+      <p data-i18n="heroesText"></p>
+    </section>
+    <div class="toolbar heroes-toolbar">
+      <div class="hero-search-field">
+        <label for="hero-search" data-i18n="heroSearchLabel"></label>
+        <input id="hero-search" type="search" data-hero-search data-i18n-placeholder="heroSearch" autocomplete="off" aria-controls="hero-catalog">
+      </div>
+      <div class="hero-role-field">
+        <label for="hero-role" data-i18n="heroRoleLabel"></label>
+        <select id="hero-role" data-hero-role aria-controls="hero-catalog">
+          <option value="" data-i18n="heroAllRoles"></option>
+          <option value="tank" data-i18n="heroRole_tank"></option>
+          <option value="warrior" data-i18n="heroRole_warrior"></option>
+          <option value="marksman" data-i18n="heroRole_marksman"></option>
+          <option value="mage" data-i18n="heroRole_mage"></option>
+          <option value="support" data-i18n="heroRole_support"></option>
+          <option value="control" data-i18n="heroRole_control"></option>
+          <option value="healer" data-i18n="heroRole_healer"></option>
+        </select>
+      </div>
+    </div>
+    <p class="hero-count" data-hero-count role="status" aria-live="polite"></p>
+    <div id="hero-catalog" class="hero-catalog" data-hero-catalog></div>
+    <p class="hero-empty" data-hero-empty data-i18n="heroEmpty" hidden></p>
+    <aside class="hero-sources">
+      <p data-i18n="heroSourcesNote"></p>
+      <a class="guide-source" data-hero-reference data-i18n="heroOfficialSource" href="https://support-hwa.nexters.com/hc/ru/articles/6116195484306-Общая-информация-о-героях"></a>
+    </aside>
+  </main>
+  <footer class="site-footer" data-shell-footer></footer>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/heroes-page.js"></script>
+</body>
+</html>

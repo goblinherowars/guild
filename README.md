@@ -20,4 +20,6 @@ Open `http://localhost:8000/`.
 
 Player data lives in `data/players.js`; translations live in `js/i18n.js`.
 
+The hero catalog (`heroes.html`) uses all 80 portraits in `assets/heroes`. Names, RU/EN summaries, classes, and source links live in `data/heroes.js`. Image paths preserve the original filename spelling and case; display names use the Hero Wars: Alliance mobile names. The catalog supports bilingual name search and class filtering, and follows the site's RU/EN switch. Source descriptions were checked on 2026-09-09; review the linked guides when updating them. No build step or runtime external API is required.
+
 Dungeon instructions live in separate HTML files: `content/dungeon/ru.html` (Russian) and `content/dungeon/en.html` (English). The Dungeon page loads the file for the selected language. Edit these files to update the guide; no build step is required.
