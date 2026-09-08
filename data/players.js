@@ -1,10 +1,371 @@
+// Powers transcribed from the supplied screenshots; optional third field is a titan image key.
 const known = {
-  PhysicalOfficer:[578441,177793,'physicalofficer'], Koly:[523803,178751,'koly'], AmicableYeoman1:[439882,215309,'amicableyeoman1'],
-  Drefgond:[423159,190220,'drefgond'], AmberClassroom1:[407013,179782,'amberclassroom1'], Raggy:[440847,129256,'raggy'],
-  FarrukhSher:[377005,192388,'farrukhsher'], CherryShu:[390248,158473,'cherryshu'], Hittokiri:[370361,175114,'hittokiri'],
-  O3Marvin:[362840,159951,'o3marvin'], 'Игрок':[367245,151195,'player'], MuddyCalamity23:[392709,119508,'muddycalamity23']
+  "PhysicalOfficer": [
+    583283,
+    183714,
+    "physicalofficer"
+  ],
+  "Koly": [
+    533562,
+    180190,
+    "koly"
+  ],
+  "Win": [
+    331744,
+    134127,
+    null
+  ],
+  "LightlyPure": [
+    366412,
+    92821,
+    null
+  ],
+  "Nord stream": [
+    205353,
+    119305,
+    null
+  ],
+  "TIM": [
+    175936,
+    89947,
+    null
+  ],
+  "GroWorm": [
+    248165,
+    125274,
+    null
+  ],
+  "eiei1313": [
+    277712,
+    81512,
+    null
+  ],
+  "°=(°√°)=° ЫЧ!": [
+    341635,
+    144481,
+    null
+  ],
+  "АрбалетМятный93": [
+    318997,
+    152497,
+    null
+  ],
+  "AmberClassroom1": [
+    407095,
+    199473,
+    "amberclassroom1"
+  ],
+  "Raggy": [
+    446733,
+    132875,
+    "raggy"
+  ],
+  "Ворона": [
+    256458,
+    93255,
+    null
+  ],
+  "LjRash": [
+    231169,
+    103607,
+    null
+  ],
+  "FarrukhSher": [
+    379544,
+    193860,
+    "farrukhsher"
+  ],
+  "CherryShu": [
+    391935,
+    159994,
+    "cherryshu"
+  ],
+  "Hittokiri": [
+    342488,
+    176405,
+    "hittokiri"
+  ],
+  "Игрок": [
+    350087,
+    159058,
+    "player"
+  ],
+  "Player": [
+    394612,
+    100169,
+    null
+  ],
+  "ВОЛОДЯ": [
+    281283,
+    213432,
+    null
+  ],
+  "Vitos": [
+    310683,
+    148219,
+    null
+  ],
+  "Gestiya": [
+    302808,
+    140025,
+    null
+  ],
+  "AmicableYeoman1": [
+    449159,
+    219163,
+    "amicableyeoman1"
+  ],
+  "Drefgond": [
+    423619,
+    190220,
+    "drefgond"
+  ],
+  "Krisricci": [
+    313759,
+    122243,
+    null
+  ],
+  "vit.l": [
+    291422,
+    142152,
+    null
+  ],
+  "O3Marvin": [
+    363515,
+    160023,
+    "o3marvin"
+  ],
+  "MuddyCalamity23": [
+    396586,
+    122818,
+    "muddycalamity23"
+  ],
+  "Мэри!!!!!": [
+    281212,
+    115141,
+    null
+  ],
+  "Kalowoodos": [
+    280873,
+    110272,
+    null
+  ]
 };
-const rows = [
+// Confirmed hero IDs from the supplied screenshots, in left-to-right order.
+const heroTeams = {
+  "PhysicalOfficer": [
+    "iris",
+    "morrigan",
+    "tempus",
+    "drayne",
+    "electra-von-grave"
+  ],
+  "Koly": [
+    "dorian",
+    "iris",
+    "tempus",
+    "byrna",
+    "corvus"
+  ],
+  "Win": [
+    "dorian",
+    "phobos",
+    "iris",
+    "dante",
+    "corvus"
+  ],
+  "LightlyPure": [
+    "miu",
+    "faceless",
+    "dante",
+    "drayne",
+    "astaroth"
+  ],
+  "Nord stream": [
+    "ginger",
+    "heidi",
+    "maya",
+    "galahad",
+    "aurora"
+  ],
+  "TIM": [
+    "folio",
+    "morrigan",
+    "maya",
+    "galahad",
+    "astaroth"
+  ],
+  "GroWorm": [
+    "iris",
+    "jhu",
+    "dante",
+    "byrna",
+    "leonel"
+  ],
+  "eiei1313": [
+    "miu",
+    "maya",
+    "drayne",
+    "galahad",
+    "astaroth"
+  ],
+  "°=(°√°)=° ЫЧ!": [
+    "folio",
+    "amira",
+    "somna",
+    "satori",
+    "leonel"
+  ],
+  "АрбалетМятный93": [
+    "cascade",
+    "jhu",
+    "byrna",
+    "drayne",
+    "electra-von-grave"
+  ],
+  "AmberClassroom1": [
+    "somna",
+    "crow",
+    "byrna",
+    "drayne",
+    "leonel"
+  ],
+  "Raggy": [
+    "aidan",
+    "iris",
+    "byrna",
+    "kayla",
+    "leonel"
+  ],
+  "Ворона": [
+    "artemis",
+    "morrigan",
+    "leonel",
+    "cleaver",
+    "aurora"
+  ],
+  "LjRash": [
+    "cascade",
+    "folio",
+    "somna",
+    "byrna",
+    "leonel"
+  ],
+  "FarrukhSher": [
+    "folio",
+    "iris",
+    "jhu",
+    "byrna",
+    "leonel"
+  ],
+  "CherryShu": [
+    "kendle",
+    "dorian",
+    "jhu",
+    "crow",
+    "leonel"
+  ],
+  "Hittokiri": [
+    "polaris",
+    "somna",
+    "byrna",
+    "leonel",
+    "julius"
+  ],
+  "Игрок": [
+    "crow",
+    "byrna",
+    "alvanor",
+    "mushy-and-shroom",
+    "cleaver"
+  ],
+  "Player": [
+    "ginger",
+    "folio",
+    "morrigan",
+    "maya",
+    "galahad"
+  ],
+  "ВОЛОДЯ": [
+    "folio",
+    "maya",
+    "kayla",
+    "drayne",
+    "astaroth"
+  ],
+  "Vitos": [
+    "octavia",
+    "iris",
+    "morrigan",
+    "dante",
+    "corvus"
+  ],
+  "Gestiya": [
+    "byrna",
+    "satori",
+    "drayne",
+    "leonel",
+    "electra-von-grave"
+  ],
+  "AmicableYeoman1": [
+    "aidan",
+    "crow",
+    "kayla",
+    "leonel",
+    "cleaver"
+  ],
+  "Drefgond": [
+    "miu",
+    "folio",
+    "byrna",
+    "satori",
+    "electra-von-grave"
+  ],
+  "Krisricci": [
+    "lars",
+    "krista",
+    "byrna",
+    "leonel",
+    "julius"
+  ],
+  "vit.l": [
+    "phobos",
+    "ginger",
+    "keira",
+    "maya",
+    "aurora"
+  ],
+  "O3Marvin": [
+    "martha",
+    "jhu",
+    "maya",
+    "leonel",
+    "astaroth"
+  ],
+  "MuddyCalamity23": [
+    "somna",
+    "iris",
+    "dante",
+    "byrna",
+    "corvus"
+  ],
+  "Мэри!!!!!": [
+    "jhu",
+    "maya",
+    "drayne",
+    "leonel",
+    "galahad"
+  ],
+  "Kalowoodos": [
+    "polaris",
+    "isaac",
+    "folio",
+    "judge",
+    "julius"
+  ]
+};
+// Guild roster and weekly activity; independent of hero compositions.
+const playerActivity = [
 ['Kalowoodos',[3020,3102,2913,6616,11546,9940,2188],39325],
 ['Игрок',[4076,4895,3916,3664,1872,4350,2174],24947],
 ['MuddyCalamity23',[6494,4081,2080,5574,2324,1906,1830],24289],
@@ -36,9 +397,10 @@ const rows = [
 ['Nord stream',[4646,1560,700,1312,700,700,0],9618],
 ['O3Marvin',[1426,1220,1438,6,1848,1070,700],7708]
 ];
-export const players = rows.map(([nickname,activity,activityTotal],i)=>{
+export const players = playerActivity.map(([nickname,activity,activityTotal],i)=>{
   const k=known[nickname];
   return { rank:i+1,nickname,activity,activityTotal,heroPower:k?.[0]??null,titanPower:k?.[1]??null,
-    heroImage:k?`assets/teams/${k[2]}-heroes.webp`:null,titanImage:k?`assets/teams/${k[2]}-titans.webp`:null };
+    heroTeam:heroTeams[nickname]??null,
+    titanImage:k?.[2]?`assets/teams/${k[2]}-titans.webp`:null };
 });
-export const knownCompositionCount = players.filter(p=>p.heroImage&&p.titanImage).length;
+export const knownCompositionCount = players.filter(p=>p.heroTeam?.length).length;
