@@ -19,3 +19,5 @@ Open `http://localhost:8000/`.
 5. Save. The site uses only relative URLs and requires no build step.
 
 Player data lives in `data/players.js`; translations live in `js/i18n.js`.
+
+Dungeon instructions live in separate HTML files: `content/dungeon/ru.html` (Russian) and `content/dungeon/en.html` (English). The Dungeon page loads the file for the selected language. Edit these files to update the guide; no build step is required.
