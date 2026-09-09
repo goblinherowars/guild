@@ -62,3 +62,6 @@
 .titan-card img{width:112px;height:112px;object-fit:contain;flex-shrink:0}
 .titan-card h3{margin:0;font-size:20px}.titan-card p{color:var(--muted);line-height:1.5;margin:8px 0}
 @media(max-width:400px){.titan-card{padding:12px;gap:10px}.titan-card img{width:88px;height:88px}}
+
+.dungeon-titan{display:inline-flex;align-items:center;gap:3px;vertical-align:middle;white-space:nowrap}
+.dungeon-titan img{display:block;width:40px;height:40px;object-fit:contain;flex-shrink:0}
