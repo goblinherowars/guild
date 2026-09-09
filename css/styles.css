@@ -47,3 +47,18 @@
 .titan-portraits{display:flex;align-items:center;gap:4px;min-width:0;padding-block:6px}
 .titan-portrait{display:block;position:relative;overflow:hidden;flex:1 1 0;min-width:0;max-width:76px;aspect-ratio:1}
 .titan-portraits .titan-portrait img,.mini-player .titan-portraits .titan-portrait img{display:block;position:absolute;max-width:none;object-fit:contain;border-radius:0}
+
+.titans-page{padding-block:28px}
+.titans-page h1{font-size:clamp(32px,5vw,52px)}
+.titan-elements{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.titan-elements a{padding:10px 16px;border:1px solid var(--line);border-radius:8px;background:#18110f}
+.titan-elements a:hover{border-color:var(--gold)}
+.titan-element{margin-block:30px;scroll-margin-top:160px}
+.titan-element h2{font-size:26px;border-bottom:2px solid var(--element-color);padding-bottom:10px}
+.titan-element small{font-size:14px;color:var(--muted)}
+#fire{--element-color:#ed754a}#water{--element-color:#58bbed}#earth{--element-color:#7cba60}#light{--element-color:#f3d57b}#dark{--element-color:#b487d7}#elarite{--element-color:#a3a1f3}
+.titan-catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px}
+.titan-card{display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#18110f}
+.titan-card img{width:112px;height:112px;object-fit:contain;flex-shrink:0}
+.titan-card h3{margin:0;font-size:20px}.titan-card p{color:var(--muted);line-height:1.5;margin:8px 0}
+@media(max-width:400px){.titan-card{padding:12px;gap:10px}.titan-card img{width:88px;height:88px}}
