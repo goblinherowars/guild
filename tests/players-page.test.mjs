@@ -25,17 +25,22 @@ test('Players page entry renders only confirmed hero icons in list and card mode
     assert.equal((roster.innerHTML.match(/class="player-card"/g)||[]).length,30);
     assert.equal((roster.innerHTML.match(/assets\/heroes\//g)||[]).length,150);
     assert.equal((roster.innerHTML.match(/class="hero-team"><div class="team-label">[^<]*<\/div><div class="no-data"/g)||[]).length,0);
-    assert.doesNotMatch(roster.innerHTML, /-heroes\.webp/);
+    assert.doesNotMatch(roster.innerHTML, /assets\/teams\//);
+    assert.equal((roster.innerHTML.match(/assets\/titans\//g)||[]).length,150);
+    assert.match(roster.innerHTML,/alt="Сильва"/);
     assert.match(roster.innerHTML,/assets\/heroes\/Byrna.png/);
     views[1].dispatchEvent(new Event('click'));
     assert.equal(roster.className,'roster cards');
     assert.equal((roster.innerHTML.match(/assets\/heroes\//g)||[]).length,150);
     setLanguage('en');
     assert.match(roster.innerHTML,/alt="Byrna"/);
+    assert.match(roster.innerHTML,/alt="Sylva"/);
+    assert.equal((roster.innerHTML.match(/assets\/titans\//g)||[]).length,150);
     search.value = 'Koly';
     search.dispatchEvent(new Event('input'));
     assert.equal((roster.innerHTML.match(/class="player-card"/g)||[]).length,1);
     assert.equal((roster.innerHTML.match(/assets\/heroes\//g)||[]).length,5);
+    assert.equal((roster.innerHTML.match(/assets\/titans\//g)||[]).length,5);
     setLanguage('ru');
   } finally {
     delete globalThis.document;

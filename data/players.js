@@ -1,154 +1,124 @@
-// Powers transcribed from the supplied screenshots; optional third field is a titan image key.
+// Powers transcribed from the supplied screenshots.
 const known = {
   "PhysicalOfficer": [
     583283,
-    183714,
-    "physicalofficer"
+    183714
   ],
   "Koly": [
     533562,
-    180190,
-    "koly"
+    180190
   ],
   "Win": [
     331744,
-    134127,
-    null
+    134127
   ],
   "LightlyPure": [
     366412,
-    92821,
-    null
+    92821
   ],
   "Nord stream": [
     205353,
-    119305,
-    null
+    119305
   ],
   "TIM": [
     175936,
-    89947,
-    null
+    89947
   ],
   "GroWorm": [
     248165,
-    125274,
-    null
+    125274
   ],
   "eiei1313": [
     277712,
-    81512,
-    null
+    81512
   ],
   "°=(°√°)=° ЫЧ!": [
     341635,
-    144481,
-    null
+    144481
   ],
   "АрбалетМятный93": [
     318997,
-    152497,
-    null
+    152497
   ],
   "AmberClassroom1": [
     407095,
-    199473,
-    "amberclassroom1"
+    199473
   ],
   "Raggy": [
     446733,
-    132875,
-    "raggy"
+    132875
   ],
   "Ворона": [
     256458,
-    93255,
-    null
+    93255
   ],
   "LjRash": [
     231169,
-    103607,
-    null
+    103607
   ],
   "FarrukhSher": [
     379544,
-    193860,
-    "farrukhsher"
+    193860
   ],
   "CherryShu": [
     391935,
-    159994,
-    "cherryshu"
+    159994
   ],
   "Hittokiri": [
     342488,
-    176405,
-    "hittokiri"
+    176405
   ],
   "Игрок": [
     350087,
-    159058,
-    "player"
+    159058
   ],
   "Player": [
     394612,
-    100169,
-    null
+    100169
   ],
   "ВОЛОДЯ": [
     281283,
-    213432,
-    null
+    213432
   ],
   "Vitos": [
     310683,
-    148219,
-    null
+    148219
   ],
   "Gestiya": [
     302808,
-    140025,
-    null
+    140025
   ],
   "AmicableYeoman1": [
     449159,
-    219163,
-    "amicableyeoman1"
+    219163
   ],
   "Drefgond": [
     423619,
-    190220,
-    "drefgond"
+    190220
   ],
   "Krisricci": [
     313759,
-    122243,
-    null
+    122243
   ],
   "vit.l": [
     291422,
-    142152,
-    null
+    142152
   ],
   "O3Marvin": [
     363515,
-    160023,
-    "o3marvin"
+    160023
   ],
   "MuddyCalamity23": [
     396586,
-    122818,
-    "muddycalamity23"
+    122818
   ],
   "Мэри!!!!!": [
     281212,
-    115141,
-    null
+    115141
   ],
   "Kalowoodos": [
     280873,
-    110272,
-    null
+    110272
   ]
 };
 // Confirmed hero IDs from the supplied screenshots, in left-to-right order.
@@ -364,6 +334,219 @@ const heroTeams = {
     "julius"
   ]
 };
+// Confirmed titan IDs from the supplied screenshots, in left-to-right order.
+const titanTeams = {
+  "PhysicalOfficer": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Koly": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Win": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "LightlyPure": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Nord stream": [
+    "araji",
+    "avalon",
+    "nova",
+    "moloch",
+    "sigurd"
+  ],
+  "TIM": [
+    "iyari",
+    "verdoc",
+    "avalon",
+    "nova",
+    "angus"
+  ],
+  "GroWorm": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "eiei1313": [
+    "hyperion",
+    "mairi",
+    "tydus",
+    "nova",
+    "sigurd"
+  ],
+  "°=(°√°)=° ЫЧ!": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "АрбалетМятный93": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "AmberClassroom1": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Raggy": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Ворона": [
+    "sylva",
+    "nova",
+    "alecto",
+    "angus",
+    "moloch"
+  ],
+  "LjRash": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "angus",
+    "pallant"
+  ],
+  "FarrukhSher": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "CherryShu": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Hittokiri": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Игрок": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Player": [
+    "hyperion",
+    "araji",
+    "tydus",
+    "nova",
+    "sigurd"
+  ],
+  "ВОЛОДЯ": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Vitos": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Gestiya": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "AmicableYeoman1": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Drefgond": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Krisricci": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "vit.l": [
+    "sylva",
+    "avalon",
+    "nova",
+    "angus",
+    "moloch"
+  ],
+  "O3Marvin": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "MuddyCalamity23": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Мэри!!!!!": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ],
+  "Kalowoodos": [
+    "sylva",
+    "eden",
+    "verdoc",
+    "avalon",
+    "angus"
+  ]
+};
 // Guild roster and weekly activity; independent of hero compositions.
 const playerActivity = [
 ['Kalowoodos',[3020,3102,2913,6616,11546,9940,2188],39325],
@@ -401,6 +584,6 @@ export const players = playerActivity.map(([nickname,activity,activityTotal],i)=
   const k=known[nickname];
   return { rank:i+1,nickname,activity,activityTotal,heroPower:k?.[0]??null,titanPower:k?.[1]??null,
     heroTeam:heroTeams[nickname]??null,
-    titanImage:k?.[2]?`assets/teams/${k[2]}-titans.webp`:null };
+    titanTeam:titanTeams[nickname]??null };
 });
 export const knownCompositionCount = players.filter(p=>p.heroTeam?.length).length;
